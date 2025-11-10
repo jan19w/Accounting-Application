@@ -1,0 +1,47 @@
+### 测试API接口 (可以在VS Code的REST Client扩展中使用)
+
+### 1. 查询所有记录
+GET http://localhost:5000/api/details
+
+###
+
+### 2. 新增一条记录
+POST http://localhost:5000/api/details
+Content-Type: application/json
+
+{
+  "id": "test123",
+  "type": "expense",
+  "category": "测试",
+  "amount": 100.50,
+  "date": "2025-11-10",
+  "note": "这是一条测试记录"
+}
+
+###
+
+### 3. 更新记录
+PUT http://localhost:5000/api/details/test123
+Content-Type: application/json
+
+{
+  "type": "income",
+  "category": "测试收入",
+  "amount": 200.00,
+  "date": "2025-11-10",
+  "note": "更新后的测试记录"
+}
+
+###
+
+### 4. 删除指定记录
+DELETE http://localhost:5000/api/details/test123
+
+###
+
+### 5. 清空所有记录（谨慎使用！）
+# DELETE http://localhost:5000/api/details
+
+###
+
+
